@@ -1,0 +1,102 @@
+{
+    "HTML": {
+        "header": {
+            "background_color": "var(--soft-blue)",
+            "color": "white",
+            "background_image": "./images/header.png",
+            "padding": "20px 0",
+            "text_align": "center",
+            "background_repeat": "no-repeat",
+            "background_position": "center center",
+            "background_size": "cover",
+            "text_shadow": "2px 2px 4px rgba(0, 0, 0, 0.5)",
+            "overlay": "rgba(0, 0, 0, 0.3)"
+        },
+        "sections": [
+            "services",
+            "about",
+            "contact",
+            "blog"
+        ]
+    },
+    "CSS": {
+        "color_palette": {
+            "soft_blue": "#89ABE3",
+            "sage_green": "#98DFAF",
+            "warm_beige": "#D8CAB8",
+            "cream": "#F5E1Da",
+            "rich_gray": "#5C5C5C",
+            "beach_sand": "#c2b280",
+            "stone_gray": "#8d8c91",
+            "towel_cream": "#e1d8cd",
+            "sunset_glow": "#edbb99",
+            "ocean_blue": "#8ca6ad",
+            "oil_brown": "#aa7939"
+        },
+        "styles": {
+            "body": {
+                "font_family": "Arial, sans-serif",
+                "line_height": "1.6",
+                "margin": "0",
+                "padding": "0",
+                "color": "var(--rich-gray)",
+                "background": "var(--cream)"
+            },
+            "header": {
+                "styles_from_above": true
+            },
+            "nav_links": {
+                "color": "white",
+                "font_size": "1.1em"
+            },
+            "sections": {
+                "background": "white",
+                "padding": "30px 20px",
+                "margin": "20px 15px",
+                "box_shadow": "0 2px 15px rgba(0,0,0,0.1)",
+                "border_radius": "8px"
+            },
+            "footer": {
+                "text_align": "center",
+                "padding": "20px 20px",
+                "background": "var(--rich-gray)",
+                "color": "white"
+            },
+            "buttons": {
+                "background": "var(--sage-green)",
+                "color": "white",
+                "border": "none",
+                "padding": "12px 25px",
+                "font_size": "1.1em",
+                "border_radius": "5px",
+                "hover_background": "#86c298"
+            }
+        }
+    },
+    "JavaScript": {
+        "contact_form": {
+            "event": "submit",
+            "message": "Thank you for your message. We will get back to you soon!"
+        },
+        "blog_posts": {
+            "data": [
+                {
+                    "title": "The Benefits of Massage Therapy",
+                    "date": "April 15, 2024",
+                    "content": "Massage therapy can help reduce stress, relieve pain, and improve overall health."
+                },
+                {
+                    "title": "How Often Should You Get a Massage?",
+                    "date": "April 10, 2024",
+                    "content": "The frequency of massages can depend on your health, lifestyle, and personal needs."
+                },
+                {
+                    "title": "Types of Massages Explained",
+                    "date": "April 5, 2024",
+                    "content": "From Swedish to Deep Tissue, learn about different types of massages and what they offer."
+                }
+            ],
+            "function": "loadBlogPosts"
+        }
+    }
+}
