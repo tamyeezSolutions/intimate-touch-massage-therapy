@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Scheherazade+New&family=Tangerine:wght@400;700&display=swap");
+
+:root {
+    --soft-blue: #89abe3;
+    --sage-green: #98dfaf;
+    --warm-beige: #d8cab8;
+    --cream: #f5e1da;
+    --rich-gray: #5c5c5c;
+    --beach-sand: #c2b280;
+    --stone-gray: #8d8c91;
+    --towel-cream: #e1d8cd;
+    --sunset-glow: #edbb99;
+    --ocean-blue: #8ca6ad;
+    --oil-brown: #aa7939;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--stone-gray);
+    background: var(--cream);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    justify-content: center; /* Center content vertically */
+    align-items: center;     /* Center content horizontally */
+    text-align: center;
+    background: var(--soft-blue) url("./images/massage-room.png") no-repeat center center / cover;
+    color: white;
+    padding: 20px;
+    margin: 0 10px;
+    height: auto; /* Adjust height automatically based on content */
+    position: relative;
+}
+
+header h1 {
+    font-family: "Tangerine", cursive;
+    font-size: calc(24px + (24 - 16) * ((100vw - 320px) / (768 - 320))); /* Responsive font size */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px; /* Add some space below the header */
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+nav {
+    position: static;
+    width: 100%;  /* Take full width to align menu items horizontally */
+    margin-top: 10px; /* Add some space between the title and nav */
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 5px; /* Adjust padding for better spacing */
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around; /* Evenly space navigation links */
+}
+
+.nav-links {
+    display: none;  /* Hidden by default */
+}
+
+.nav-links.active {
+    display: flex;  /* Shown when active class is added */
+    flex-direction: column;  /* Stack links vertically */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a, .cta-button {
+    color: var(--rich-gray);
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover, .cta-button:hover {
+    color: white;
+    background-color: var(--sage-green);
+}
+
+.cta-button {
+    background-color: var(--sunset-glow);
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cta-button:focus {
+    background-color: var(--sage-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body, .cta-button, button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 20px; /* Smaller font size on smaller screens */
+    }
+
+    nav {
+        flex-direction: column; /* Stack nav items vertically on very small screens */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-top: 0.5rem;
+    }
+
+    section, footer {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none; /* Hide navigation links on small screens */
+        flex-direction: column; /* Stack links vertically when shown */
+        width: 100%; /* Use the full width of the nav bar */
+        position: absolute; /* Position it on top of other content */
+        top: 100%; /* Position right below the nav bar */
+        left: 0;
+        background: var(--cream); /* Background color */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 18px; /* Even smaller font size for very small devices */
+    }
+
+    nav, footer {
+        flex-direction: column;
+    }
+
+    nav ul li, footer div {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    background: white;
+    padding: 30px 20px;
+    margin: 20px 15px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 20px;
+    background: var(--rich-gray);
+    color: white;
+}
